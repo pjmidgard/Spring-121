@@ -94,10 +94,6 @@ class compression:
                             
                       
                          
-                       if len(data)<=3720:
-                           
-                            print("file too small)
-                            raise SystemExit
 
                   
                         s=str(data)
@@ -319,7 +315,7 @@ class compression:
                                                                                 #print(size_after_block)
 
 
-                                                                                if Times6>=120 or size_of_block!=long_block:
+                                                                                if Times6>=120 or size_of_block!=long_block or if len(data)<=3720:
                                                                                     size_data4=Zeroes
 
                                                                                 elif size_of_block<=size_after_block+1 and Times6<=120 and size_of_block==long_block:
@@ -673,7 +669,7 @@ class compression:
                                                                                 Zeroes5=size_data3[block:block+blocks]
                                                                                 size_after2=len(Zeroes5)
 
-                                                                                if Times6>=120 or size_after2!=long_block:
+                                                                                if Times6>=120 or size_after2!=long_block or if len(data)<=3720:
                                                                                     Zeroes4=size_data3[block:block+blocks]
                                                                                     size_after4=len(Zeroes4)
                                                                                     size_data4=Zeroes4
