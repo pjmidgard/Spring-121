@@ -240,6 +240,7 @@ class compression:
                                                     
                                                    
                                                     long_block=block_size_long
+                                                    long2=len(size_data3)
                                                     start=0
                                                     blocks=long_block
                                                     size_compress=63
@@ -654,6 +655,7 @@ class compression:
                                                     #print(long_block)
                                                     start=0
                                                     blocks=long_block
+                                                    long2=len(size_data3)
                                                     size_compress=63
                                                     end=blocks
                                                     
