@@ -38,7 +38,13 @@ class compression:
 
                     
                     
-
+                    if name[long-4:long]==".doc":
+                    	Deep_long=857
+                    	Deep_long_All=Deep_long*31
+                    elif name[long-4:long]!=".doc":
+                    	Deep_long=120
+                    	Deep_long_All=Deep_long*31
+                    	
                     nameas=name+".bin"
                 
                     nac=len(nameas)
@@ -315,13 +321,13 @@ class compression:
                                                                                 #print(size_after_block)
 
 
-                                                                                if Times6>=120 or size_of_block!=long_block or  len(data)<=3720:
+                                                                                if Times6>=Deep_long or size_of_block!=long_block or  len(data)<=Deep_long_All:
                                                                                     size_data4=Zeroes
 
-                                                                                elif size_of_block<=size_after_block+1 and Times6<=120 and size_of_block==long_block:
+                                                                                elif size_of_block<=size_after_block+1 and Times6<Deep_long and size_of_block==long_block:
                                                                                     size_data4="0"+Zeroes
                                                                                     
-                                                                                elif size_of_block>size_after_block+1 and Times6<=120 and size_of_block==long_block:
+                                                                                elif size_of_block>size_after_block+1 and Times6<=Deep_long and size_of_block==long_block:
                                                                                     size_data4="1"+size_data7
                                                                                     
                                                                                 
@@ -445,6 +451,13 @@ class compression:
                     nac=len(nameas)
                     
                     Deep=1000
+                    
+                    if nameas[long-4:long]==".doc":
+                    	Deep_long=857
+                    	Deep_long_All=Deep_long*31
+                    elif nameas[long-4:long]!=".doc":
+                    	Deep_long=120
+                    	Deep_long_All=Deep_long*31
                     
                     
                     nac=len(nameas)
@@ -669,14 +682,14 @@ class compression:
                                                                                 Zeroes5=size_data3[block:block+blocks]
                                                                                 size_after2=len(Zeroes5)
 
-                                                                                if Times6>=120 or size_after2!=long_block or  len(data)<=3720:
+                                                                                if Times6>=Deep_long or size_after2!=long_block or  len(data)<=Deep_long_All:
                                                                                     Zeroes4=size_data3[block:block+blocks]
                                                                                     size_after4=len(Zeroes4)
                                                                                     size_data4=Zeroes4
 
                                                                                     block=block+size_after4
                                                                                     
-                                                                                elif Zeroes=="0" and size_after2==long_block and Times6<=120:
+                                                                                elif Zeroes=="0" and size_after2==long_block and Times6<=Deep_long:
                                                                                     block=block+1
                                                                                     Zeroes3=size_data3[block:block+blocks]
                                                                                     size_after3=len(Zeroes3)
@@ -688,7 +701,7 @@ class compression:
                                                                                     
                                                                                 
 
-                                                                                elif Zeroes=="1" and size_after2==long_block and Times6<=120:
+                                                                                elif Zeroes=="1" and size_after2==long_block and Times6<=Deep_long:
                                                                                     block=block+1
                                                                                 
                                                                                     size_of_block=len(Zeroes)
