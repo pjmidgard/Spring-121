@@ -39,11 +39,13 @@ class compression:
                     
                     
                     if name[long-4:long]==".doc":
-                    	Deep_long=857
-                    	Deep_long_All=Deep_long*31
+                    	Deep_long=25
+                    	Deep_long_All=Deep_long*1023
+                    	block_size_long=1023
                     elif name[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
+                    	block_size_long=31
                     	
                     nameas=name+".bin"
                 
@@ -210,7 +212,7 @@ class compression:
                                     long2=len(size_data3)
                                     Deep=long2//28
                                     times2=Deep
-                                    long_block=1023
+                                    long_block=block_size_long
                                     Where5=0
                                     before_block=0
                                     check_size_block=0
@@ -452,12 +454,17 @@ class compression:
                     
                     Deep=1000
                     
+                    long=len(nameas)
+                    
                     if nameas[long-4:long]==".doc":
-                    	Deep_long=857
-                    	Deep_long_All=Deep_long*31
+                    	Deep_long=25
+                    	Deep_long_All=Deep_long*1023
+                    	block_size_long=1023
                     elif nameas[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
+                    	block_size_long=31
+                    	
                     
                     
                     nac=len(nameas)
@@ -638,7 +645,7 @@ class compression:
 
                                                     
                                                    
-                                                    long_block=31
+                                                    long_block=block_size_long
                                                     #print(long_block)
                                                     start=0
                                                     blocks=long_block
