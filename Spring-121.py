@@ -39,7 +39,7 @@ class compression:
                     
                     
                     if name[long-4:long]==".doc":
-                    	Deep_long=25
+                    	Deep_long=80
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
                     elif name[long-4:long]!=".doc":
@@ -237,7 +237,7 @@ class compression:
 
                                                     
                                                    
-                                                    long_block=31
+                                                    long_block=block_size_long
                                                     start=0
                                                     blocks=long_block
                                                     size_compress=63
@@ -457,7 +457,7 @@ class compression:
                     long=len(nameas)
                     
                     if nameas[long-4:long]==".doc":
-                    	Deep_long=25
+                    	Deep_long=80
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
                     elif nameas[long-4:long]!=".doc":
