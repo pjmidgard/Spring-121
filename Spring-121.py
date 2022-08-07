@@ -93,8 +93,11 @@ class compression:
                             raise SystemExit
                             
                       
-                 
-                       
+                         
+                       if len(data)<=3720:
+                           
+                            print("file too small)
+                            raise SystemExit
 
                   
                         s=str(data)
