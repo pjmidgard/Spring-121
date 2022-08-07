@@ -42,10 +42,12 @@ class compression:
                     	Deep_long=80
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
+                    	Times_compression=100
                     elif name[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
                     	block_size_long=31
+                    	Times_compression=1
                     	
                     nameas=name+".bin"
                 
@@ -232,7 +234,7 @@ class compression:
                                     Find_guess=0
                                     while Find_guess!=1:
                                         
-                                        while  times_of_times!=1:
+                                        while  times_of_times!=Times_compression:
 
 
                                                     
@@ -352,6 +354,7 @@ class compression:
                                                     times_of_times=times_of_times+1
                                                     
                                         long_after=len(size_data3)
+                                        long2=len(size_data3)
                                         
                                         size_data9=size_data3
 
@@ -460,10 +463,12 @@ class compression:
                     	Deep_long=80
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
+                    	Times_compression=100
                     elif nameas[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
                     	block_size_long=31
+                    	Times_compression=1
                     	
                     
                     
@@ -640,7 +645,7 @@ class compression:
                                     Find_guess=0
                                     times_of_times1=0
                                         
-                                    while  times_of_times1!=1:
+                                    while  times_of_times1!=Times_compression:
 
 
                                                     
@@ -789,6 +794,7 @@ class compression:
                                             
                                         
                                     long_after=len(size_data3)
+                                    long2=len(size_data3)
                                         
                                     size_data9=size_data3
 
