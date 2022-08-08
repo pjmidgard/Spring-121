@@ -42,7 +42,7 @@ class compression:
                     	Deep_long=20
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
-                    	Times_compression=10
+                    	Times_compression=1
                     elif name[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
@@ -465,7 +465,7 @@ class compression:
                     	Deep_long=20
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
-                    	Times_compression=100
+                    	Times_compression=1
                     elif nameas[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
