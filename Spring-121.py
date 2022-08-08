@@ -39,10 +39,10 @@ class compression:
                     
                     
                     if name[long-4:long]==".doc":
-                    	Deep_long=80
+                    	Deep_long=10
                     	Deep_long_All=Deep_long*1023
                     	block_size_long=1023
-                    	Times_compression=10
+                    	Times_compression=100
                     elif name[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
@@ -241,6 +241,7 @@ class compression:
                                                    
                                                     long_block=block_size_long
                                                     long2=len(size_data3)
+                                                    long_block=long_block-1
                                                     start=0
                                                     blocks=long_block
                                                     size_compress=63
@@ -461,10 +462,10 @@ class compression:
                     long=len(nameas)
                     
                     if nameas[long-4:long]==".doc":
-                    	Deep_long=80
+                    	Deep_long=10
                     	Deep_long_All=Deep_long*1023
-                    	block_size_long=1023
-                    	Times_compression=10
+                    	block_size_long=1023-100
+                    	Times_compression=100
                     elif nameas[long-4:long]!=".doc":
                     	Deep_long=120
                     	Deep_long_All=Deep_long*31
@@ -654,6 +655,7 @@ class compression:
                                                     long_block=block_size_long
                                                     #print(long_block)
                                                     start=0
+                                                    long_block=long_block+1
                                                     blocks=long_block
                                                     long2=len(size_data3)
                                                     size_compress=63
